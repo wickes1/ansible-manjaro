@@ -1,0 +1,13 @@
+---
+- name: Install applications
+  kewlfft.aur.aur:
+    use: yay
+    name: "{{ items }}"
+    aur_only: no
+    update_cache: yes
+    state: present
+  with_items: "{{ apps }}"
+  become: yes
+  become_user: aur_builder
+  tags:
+    - apps

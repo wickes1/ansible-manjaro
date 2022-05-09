@@ -1,0 +1,43 @@
+---
+- name: Set zsh as default shell
+  user:
+    name: "{{ username }}"
+    shell: /usr/bin/zsh
+  become: true
+  tags:
+    - zsh
+
+- name: Install oh-my-zsh
+  ansible.builtin.shell: |
+    # Only install if package does not exist
+    if [ -d "/home/{{ username }}/.oh-my-zsh" ]; then
+      exit 0
+    else
+      sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+    fi
+  register: command_result
+  failed_when: command_result.rc != 0
+  changed_when: "'successfully' in command_result.stdout"
+  tags:
+    - zsh
+
+- name: Install zsh-plugins
+  git:
+    repo: "{{ item }}"
+    dest: /home/{{ username }}/.oh-my-zsh/custom/plugins/{{ item.rsplit('/', 1)[-1] }}
+    depth: 1
+  with_items: "{{ zsh_plugins }}"
+  become: yes
+  tags:
+    - zsh
+    - zsh-plugin
+
+- name: Install powerlevel10k
+  ansible.builtin.git:
+    repo: https://github.com/romkatv/powerlevel10k
+    dest: /home/{{ username }}/.oh-my-zsh/custom/themes/powerlevel10k
+    depth: 1
+  become: yes
+  tags:
+    - zsh
+    - zsh-theme

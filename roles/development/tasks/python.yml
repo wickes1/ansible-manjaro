@@ -1,0 +1,36 @@
+---
+- name: Install pyenv
+  pacman:
+    name:
+      - pyenv
+    state: present
+  become: yes
+  tags:
+    - development
+    - python
+    - pyenv
+
+- name: Setup pyenv python {{ python.pyenv_version }}
+  ansible.builtin.shell: |
+    pyenv update
+    pyenv install {{ python.pyenv_version }} -s
+    pyenv global {{ python.pyenv_version }}
+  register: command_result
+  failed_when: command_result.rc != 0
+  changed_when: "'successfully' in command_result.stdout"
+  tags:
+    - development
+    - python
+    - pyenv
+
+- name: Install poetry
+  ansible.builtin.shell: |
+    curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+  register: command_result
+  failed_when: command_result.rc != 0
+  changed_when: "'successfully' in command_result.stdout"
+  become: yes
+  tags:
+    - development
+    - python
+    - poetry

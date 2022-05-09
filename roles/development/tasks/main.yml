@@ -1,0 +1,32 @@
+---
+- name: Install develop environment
+  kewlfft.aur.aur:
+    use: yay
+    name: "{{ item }}"
+    aur_only: no
+    update_cache: yes
+    state: present
+  become: yes
+  become_user: aur_builder
+  with_items:  "{{ dev_envs }}"
+  tags:
+    - development
+    - dev_envs
+
+- name: Install development tools
+  kewlfft.aur.aur:
+    use: yay
+    name: "{{ item }}"
+    aur_only: no
+    update_cache: yes
+    state: present
+  become: yes
+  become_user: aur_builder
+  with_items: "{{ dev_tools }}"
+  tags:
+    - development
+    - dev_tools
+
+- import_tasks: python.yml
+- import_tasks: kubecm.yml
+- import_tasks: aws.yml

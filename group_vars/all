@@ -1,0 +1,43 @@
+---
+apps:
+  - vlc
+  - joplin-appimage
+  - microsoft-edge-stable-bin
+  - anydesk-bin
+  - rambox-bin
+  - rclone
+  - nerd-fonts-complete
+  - libreoffice-fresh
+base_utils:
+  - yay
+dev_envs:
+  - docker
+  - docker-compose
+  - kubectl
+  - go
+  - go-tools
+  - npm
+  - nodejs
+dev_tools:
+  - lens-bin
+  - electerm-bin
+  - visual-studio-code-bin
+  - dbeaver
+  - redisinsight
+home_dotfiles:
+  - .aliasrc
+  - .pathrc
+  - .p10k.zsh
+python:
+  pyenv_version: 3.10.3
+utils:
+  - zsh
+  - kitty
+  - unzip
+  - kwin-bismuth-bin
+  - xdotool
+zsh_plugins:
+  - https://github.com/zsh-users/zsh-autosuggestions
+  - https://github.com/zsh-users/zsh-completions
+  - https://github.com/zsh-users/zsh-history-substring-search
+  - https://github.com/zsh-users/zsh-syntax-highlighting

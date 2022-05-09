@@ -1,0 +1,30 @@
+# ############################ Hosts ############################ #
+# localhost machine
+[localhost]
+127.0.0.1
+
+# 'test build' VM machine provisioned by Vagrant
+[testbuild_vagrant]
+192.168.56.2
+
+[testbuild_vm]
+192.168.122.151
+
+# ########################## Variables ########################## #
+# all host variables
+[all:vars]
+ansible_python_interpreter = /usr/bin/python3
+
+# localhost machine variables
+[localhost:vars]
+ansible_connection = local
+
+# variables for the 'test build' VM machine
+[testbuild_vagrant:vars]
+ansible_ssh_user = vagrant
+ansible_ssh_private_key_file=~/.vagrant.d/insecure_private_key
+
+[testbuild_vm:vars]
+ansible_ssh_user = manjaro
+ansible_ssh_pass = <password>
+ansible_become_password = <password>

@@ -1,0 +1,59 @@
+---
+- name: Copy home dotfiles
+  copy:
+    src: "{{ item }}"
+    dest: /home/{{ username }}/
+    force: True
+    owner: "{{ username }}"
+    group: "{{ username }}"
+    mode: 0644
+  with_items: "{{ home_dotfiles }}"
+  become: yes
+  tags:
+    - dotfiles
+    - zsh
+
+- name: Render zsh dotfiles
+  ansible.builtin.template:
+    src: .zshrc.j2
+    dest: /home/{{ username }}/.zshrc
+    force: True
+    owner: "{{ username }}"
+    group: "{{ username }}"
+    mode: 0644
+  become: yes
+  tags:
+    - dotfiles
+    - zsh
+
+- name: Copy kitty dotfiles
+  copy:
+    src: "{{ item }}"
+    dest: /home/{{ username }}/.config/kitty/
+    force: True
+    owner: "{{ username }}"
+    group: "{{ username }}"
+    mode: 0644
+  with_items:
+    - "kitty/kitty.conf"
+    - "kitty/current-theme.conf"
+  become: yes
+  tags:
+    - dotfiles
+    - kitty
+
+- name: Copy KDE dotfiles
+  copy:
+    src: "{{ item }}"
+    dest: /home/{{ username }}/.config/KDE
+    force: True
+    owner: "{{ username }}"
+    group: "{{ username }}"
+    mode: 0644
+  with_items:
+    - "kde/kde-shortcut-code.sh"
+    - "kde/kde-shortcut-kitty.sh"
+  become: yes
+  tags:
+    - dotfiles
+    - kde

@@ -1,0 +1,14 @@
+- name: Install kubecm
+  ansible.builtin.shell: |
+    curl -Lo kubecm.tar.gz https://github.com/sunny0826/kubecm/releases/download/v0.16.4/kubecm_0.16.4_Linux_x86_64.tar.gz
+    tar -zxvf kubecm.tar.gz kubecm
+    sudo mv kubecm /usr/local/bin/
+    sudo chmod +x /usr/local/bin/kubecm
+    rm kubecm.tar.gz
+  register: command_result
+  failed_when: command_result.rc != 0
+  changed_when: "'successfully' in command_result.stdout"
+  become: yes
+  tags:
+    - development
+    - kubecm

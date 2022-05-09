@@ -1,0 +1,2 @@
+alias ssha='eval $(ssh-agent) && ssh-add'
+alias kc='kubecm'

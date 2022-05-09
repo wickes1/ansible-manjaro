@@ -1,0 +1,8 @@
+---
+- name: Configure a Manjaro OS (Arch Linux distribution) KDE desktop environment.
+  hosts: all
+  roles:
+    - { role: users, tags: ["users"] }
+    - { role: base, tags: ["base"] }
+    - { role: development, tags: ["development"] }
+    - { role: apps, tags: ["apps"] }

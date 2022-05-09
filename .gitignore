@@ -1,0 +1,5 @@
+# Playbook Retry
+playbook.retry
+
+# Vagrant build folder
+.vagrant
