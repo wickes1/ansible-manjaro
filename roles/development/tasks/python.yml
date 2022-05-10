@@ -12,7 +12,6 @@
 
 - name: Setup pyenv python {{ python.pyenv_version }}
   ansible.builtin.shell: |
-    pyenv update
     pyenv install {{ python.pyenv_version }} -s
     pyenv global {{ python.pyenv_version }}
   register: command_result

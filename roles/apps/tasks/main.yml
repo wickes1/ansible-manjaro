@@ -2,7 +2,7 @@
 - name: Install applications
   kewlfft.aur.aur:
     use: yay
-    name: "{{ items }}"
+    name: "{{ item }}"
     aur_only: no
     update_cache: yes
     state: present
