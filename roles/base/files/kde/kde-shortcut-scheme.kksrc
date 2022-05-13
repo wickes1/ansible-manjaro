@@ -1,8 +1,8 @@
 [ActivityManager][Global Shortcuts]
 switch-to-activity-=
-switch-to-activity-49bb9836-604e-4722-9bcb-93871c8e8b9c=
-switch-to-activity-707270e6-a74a-4bc5-8145-a508bc135d1f=
-switch-to-activity-b3c888ed-bc74-4fdf-ad5c-7b1280bfcc10=
+switch-to-activity-49bb9836-604e-4722-9bcb-93871c8e8b9c=Meta+2
+switch-to-activity-707270e6-a74a-4bc5-8145-a508bc135d1f=Meta+1
+switch-to-activity-b3c888ed-bc74-4fdf-ad5c-7b1280bfcc10=Meta+3
 
 [KDE Keyboard Layout Switcher][Global Shortcuts]
 Switch keyboard layout to English (US)=
@@ -12,7 +12,7 @@ Switch to Next Keyboard Layout=Ctrl+Alt+K
 AboutApp=
 AboutKDE=
 Activate Next Tab=Ctrl+]; Ctrl+PgDown
-Activate Previous Tab=Ctrl+[; Ctrl+PgUp
+Activate Previous Tab=Ctrl+PgUp; Ctrl+[
 ActualSize=Ctrl+0
 AddBookmark=Ctrl+B
 Back=Back; Alt+Left
@@ -23,7 +23,7 @@ Clear=
 Close=Ctrl+Esc; Ctrl+W
 ConfigureNotifications=
 ConfigureToolbars=
-Copy=Ctrl+Ins; Ctrl+C
+Copy=Ctrl+C; Ctrl+Ins
 CreateFolder=F10
 Cut=Ctrl+X; Shift+Del
 DeleteFile=Shift+Del
@@ -49,7 +49,7 @@ Goto=
 GotoLine=Ctrl+G
 GotoPage=
 Help=F1
-Home=Home Page; Alt+Home
+Home=Alt+Home; Home Page
 KeyBindings=Ctrl+Alt+,
 Mail=
 MoveToTrash=Del
@@ -58,7 +58,7 @@ Next=PgDown
 NextCompletion=Ctrl+Down
 Open=Ctrl+O
 OpenRecent=
-Paste=Ctrl+V; Shift+Ins
+Paste=Shift+Ins; Ctrl+V
 Paste Selection=Ctrl+Shift+Ins
 Preferences=Ctrl+Shift+,
 PrevCompletion=Ctrl+Up
@@ -67,7 +67,7 @@ PrintPreview=
 Prior=PgUp
 Quit=Ctrl+Q
 Redo=Ctrl+Shift+Z
-Reload=F5; Refresh
+Reload=Refresh; F5
 RenameFile=F2
 Replace=Ctrl+R
 ReportBug=
@@ -91,7 +91,7 @@ Undo=Ctrl+Z
 Up=Alt+Up
 WhatsThis=Shift+F1
 Zoom=
-ZoomIn=Ctrl+=; Ctrl++
+ZoomIn=Ctrl++; Ctrl+=
 ZoomOut=Ctrl+-
 
 [bismuth][Global Shortcuts]
@@ -109,8 +109,8 @@ increase_master_size=Meta+}
 increase_master_win_count=Meta+]
 increase_window_height=Meta+Ctrl+I
 increase_window_width=Meta+Ctrl+L
-move_window_to_bottom_pos=Meta+Shift+K
-move_window_to_left_pos=Meta+Shift+J
+move_window_to_bottom_pos=
+move_window_to_left_pos=Meta+Shift+H
 move_window_to_next_pos=
 move_window_to_prev_pos=
 move_window_to_right_pos=Meta+Shift+L
@@ -141,7 +141,7 @@ Toggle Touchpad=Touchpad Toggle
 
 [kded5][Global Shortcuts]
 Show System Activity=Ctrl+Esc
-display=Display; Meta+P
+display=Meta+P; Display
 
 [khotkeys][Global Shortcuts]
 {b4ef11f5-81e0-4ae5-885d-2d3189a3fb26}=Ctrl+Space
@@ -222,6 +222,7 @@ Switch to Screen 4=
 Switch to Screen 5=
 Switch to Screen 6=
 Switch to Screen 7=
+Toggle=
 Toggle Night Color=
 Toggle Window Raise/Lower=
 TrackMouse=
@@ -239,7 +240,7 @@ Walk Through Windows of Current Application Alternative=
 Walk Through Windows of Current Application Alternative (Reverse)=
 Window Above Other Windows=
 Window Below Other Windows=
-Window Close=Alt+F4
+Window Close=Ctrl+Shift+Q; Alt+F4
 Window Fullscreen=
 Window Grow Horizontal=
 Window Grow Vertical=
@@ -357,16 +358,16 @@ Toggle Keyboard Backlight=Keyboard Light On/Off
 Turn Off Screen=
 
 [plasmashell][Global Shortcuts]
-activate task manager entry 1=Meta+1
+activate task manager entry 1=
 activate task manager entry 10=
-activate task manager entry 2=Meta+2
-activate task manager entry 3=Meta+3
-activate task manager entry 4=Meta+4
-activate task manager entry 5=Meta+5
-activate task manager entry 6=Meta+6
-activate task manager entry 7=Meta+7
-activate task manager entry 8=Meta+8
-activate task manager entry 9=Meta+9
+activate task manager entry 2=
+activate task manager entry 3=
+activate task manager entry 4=
+activate task manager entry 5=
+activate task manager entry 6=
+activate task manager entry 7=
+activate task manager entry 8=
+activate task manager entry 9=
 activate widget 22=
 activate widget 27=
 activate widget 34=
