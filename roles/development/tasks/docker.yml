@@ -1,0 +1,12 @@
+---
+- name: Config Docker
+  ansible.builtin.shell: |
+    sudo usermod -aG docker {{ username }}
+    newgrp docker
+  become: yes
+  register: command_result
+  failed_when: command_result.rc != 0
+  changed_when: "'successfully' in command_result.stdout"
+  tags:
+    - development
+    - docker

@@ -10,9 +10,14 @@ apps:
   - libreoffice-fresh
 base_utils:
   - yay
+  - base-devel
+  - gcc
+  - postgresql-libs
+  - librdkafka
 dev_envs:
   - docker
   - docker-compose
+  - helm
   - kubectl
   - go
   - go-tools

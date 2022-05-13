@@ -30,3 +30,4 @@
 - import_tasks: python.yml
 - import_tasks: kubecm.yml
 - import_tasks: aws.yml
+- import_tasks: docker.yml
