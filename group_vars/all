@@ -11,9 +11,22 @@ apps:
 base_utils:
   - yay
   - base-devel
+  - binutils
   - gcc
-  - postgresql-libs
-  - librdkafka
+  - htop
+  - keychain
+  - libcurl-gnutls
+  - lib32-glibc
+  - make
+  - mlocate
+  - ntp
+  - openssl-1.0
+  - pamac
+  - tree
+  - wget
+  - xclip
+  - xorg-xinput
+  - spectacle
 dev_envs:
   - docker
   - docker-compose
@@ -23,6 +36,8 @@ dev_envs:
   - go-tools
   - npm
   - nodejs
+  - postgresql-libs
+  - librdkafka
 dev_tools:
   - lens-bin
   - electerm-bin
