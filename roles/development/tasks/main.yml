@@ -7,7 +7,7 @@
     update_cache: yes
     state: present
   become: yes
-  become_user: aur_builder
+  become_user: root
   with_items:  "{{ dev_envs }}"
   tags:
     - development
@@ -21,7 +21,7 @@
     update_cache: yes
     state: present
   become: yes
-  become_user: aur_builder
+  become_user: root
   with_items: "{{ dev_tools }}"
   tags:
     - development
