@@ -8,6 +8,8 @@ apps:
   - rclone
   - nerd-fonts-complete
   - libreoffice-fresh
+js_apps:
+  - joplin
 base_utils:
   - yay
   - base-devel
@@ -44,10 +46,11 @@ dev_tools:
   - visual-studio-code-bin
   - dbeaver
   - redisinsight
+  - k9s
 home_dotfiles:
-  - .aliasrc
-  - .pathrc
-  - .p10k.zsh
+  - zsh/.aliasrc
+  - zsh/.pathrc
+  - zsh/.p10k.zsh
 python:
   pyenv_version: 3.10.3
 utils:

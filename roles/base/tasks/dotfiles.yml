@@ -15,12 +15,14 @@
 
 - name: Render zsh dotfiles
   ansible.builtin.template:
-    src: .zshrc.j2
+    src: "{{ item }}"
     dest: /home/{{ username }}/.zshrc
     force: True
     owner: "{{ username }}"
     group: "{{ username }}"
     mode: 0644
+  with_items:
+    - "zsh/.zshrc.j2"
   become: yes
   tags:
     - dotfiles
@@ -57,3 +59,18 @@
   tags:
     - dotfiles
     - kde
+
+- name: Copy joplin dotfiles
+  copy:
+    src: "{{ item }}"
+    dest: /home/{{ username }}/.config/joplins/
+    force: True
+    owner: "{{ username }}"
+    group: "{{ username }}"
+    mode: 0644
+  with_items:
+    - "joplin/keymap.json"
+  become: yes
+  tags:
+    - dotfiles
+    - joplin
