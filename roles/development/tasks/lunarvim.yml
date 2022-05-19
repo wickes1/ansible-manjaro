@@ -1,0 +1,10 @@
+---
+- name: Install lunarvim
+  ansible.builtin.shell: |
+    bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+  register: command_result
+  failed_when: command_result.rc != 0
+  changed_when: "'successfully' in command_result.stdout"
+  tags:
+    - development
+    - lunarvim

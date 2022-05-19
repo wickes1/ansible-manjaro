@@ -31,3 +31,4 @@
 - import_tasks: kubecm.yml
 - import_tasks: aws.yml
 - import_tasks: docker.yml
+- import_tasks: lunarvim.yml
