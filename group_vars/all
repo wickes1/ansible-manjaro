@@ -29,6 +29,7 @@ base_utils:
   - xclip
   - xorg-xinput
   - spectacle
+  - wmctrl
 dev_envs:
   - docker
   - docker-compose
