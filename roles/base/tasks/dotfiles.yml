@@ -71,8 +71,8 @@
     force: True
     owner: "{{ username }}"
     group: "{{ username }}"
-    mode: 0644
-  become: yes
+    mode: u+rwx
+    become: yes
   tags:
     - ranger
     - dotfiles
