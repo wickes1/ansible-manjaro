@@ -30,6 +30,7 @@ base_utils:
   - xorg-xinput
   - spectacle
   - wmctrl
+  - ranger
 dev_envs:
   - docker
   - docker-compose
@@ -66,3 +67,5 @@ zsh_plugins:
   - https://github.com/zsh-users/zsh-completions
   - https://github.com/zsh-users/zsh-history-substring-search
   - https://github.com/zsh-users/zsh-syntax-highlighting
+ranger_plugins:
+  - https://github.com/alexanderjeurissen/ranger_devicons

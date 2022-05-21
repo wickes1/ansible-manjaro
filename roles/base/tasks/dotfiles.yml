@@ -13,21 +13,6 @@
     - dotfiles
     - zsh
 
-      # - name: Render zsh dotfiles
-      #   ansible.builtin.template:
-      #     src: "{{ item }}"
-      #     dest: /home/{{ username }}/.zshrc
-      #     force: True
-      #     owner: "{{ username }}"
-      #     group: "{{ username }}"
-      #     mode: 0644
-      #   with_items:
-      #     - "zsh/.zshrc.j2"
-      #   become: yes
-      #   tags:
-      #     - dotfiles
-      #     - zsh
-
 - name: Copy kitty dotfiles
   copy:
     src: "{{ item }}"
@@ -51,7 +36,7 @@
     force: True
     owner: "{{ username }}"
     group: "{{ username }}"
-    mode: 0644
+    mode: u+rwx
   with_items:
     - "kde/kde-shortcut-code.sh"
     - "kde/kde-shortcut-kitty.sh"
@@ -74,3 +59,16 @@
   tags:
     - dotfiles
     - joplin
+
+- name: Copy ranger dotfiles
+  copy:
+    src: ranger
+    dest: /home/{{ username }}/.config/
+    force: True
+    owner: "{{ username }}"
+    group: "{{ username }}"
+    mode: 0644
+  become: yes
+  tags:
+    - dotfiles
+    - ranger

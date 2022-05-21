@@ -58,3 +58,4 @@
 
 - import_tasks: zsh.yml
 - import_tasks: dotfiles.yml
+- import_tasks: ranger.yml
