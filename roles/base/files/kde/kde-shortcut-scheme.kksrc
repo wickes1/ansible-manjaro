@@ -14,7 +14,7 @@ Switch to Next Keyboard Layout=Ctrl+Alt+K
 AboutApp=
 AboutKDE=
 Activate Next Tab=Ctrl+]; Ctrl+PgDown
-Activate Previous Tab=Ctrl+PgUp; Ctrl+[
+Activate Previous Tab=Ctrl+[; Ctrl+PgUp
 ActualSize=Ctrl+0
 AddBookmark=Ctrl+B
 Back=Alt+Left; Back
@@ -22,10 +22,10 @@ BackwardWord=Ctrl+Left
 Begin=Ctrl+Home
 BeginningOfLine=Home
 Clear=
-Close=Ctrl+W; Ctrl+Esc
+Close=Ctrl+W
 ConfigureNotifications=
 ConfigureToolbars=
-Copy=Ctrl+Ins; Ctrl+C
+Copy=Ctrl+C; Ctrl+Ins
 CreateFolder=F10
 Cut=Shift+Del; Ctrl+X
 DeleteFile=Shift+Del
@@ -80,7 +80,7 @@ Save=Ctrl+S
 SaveAs=Ctrl+Shift+S
 SaveOptions=
 SelectAll=Ctrl+A
-ShowHideHiddenFiles=Ctrl+H; Alt+.
+ShowHideHiddenFiles=Alt+.; Ctrl+H
 ShowMenubar=Ctrl+M
 ShowStatusbar=
 ShowToolbar=
@@ -101,12 +101,12 @@ decrease_master_size=
 decrease_master_win_count=Meta+[
 decrease_window_height=Meta+Ctrl+K
 decrease_window_width=Meta+Ctrl+H
-focus_bottom_window=Meta+J
-focus_left_window=Meta+H
+focus_bottom_window=
+focus_left_window=
 focus_next_window=
 focus_prev_window=
-focus_right_window=Meta+L
-focus_upper_window=Meta+K
+focus_right_window=
+focus_upper_window=
 increase_master_size=
 increase_master_win_count=Meta+]
 increase_window_height=Meta+Ctrl+J
@@ -142,7 +142,7 @@ Enable Touchpad=Touchpad On
 Toggle Touchpad=Touchpad Toggle
 
 [kded5][Global Shortcuts]
-Show System Activity=Ctrl+Esc
+Show System Activity=
 display=Display; Meta+P
 
 [khotkeys][Global Shortcuts]
@@ -163,7 +163,7 @@ mute=Volume Mute
 
 [ksmserver][Global Shortcuts]
 Halt Without Confirmation=
-Lock Session=Screensaver; Ctrl+Alt+L
+Lock Session=Ctrl+Alt+L; Screensaver
 Log Out=Ctrl+Alt+Del
 Log Out Without Confirmation=
 Reboot Without Confirmation=
@@ -191,10 +191,10 @@ Switch One Desktop Down=
 Switch One Desktop Up=
 Switch One Desktop to the Left=
 Switch One Desktop to the Right=
-Switch Window Down=Meta+Alt+Down
-Switch Window Left=Meta+Alt+Left
-Switch Window Right=Meta+Alt+Right
-Switch Window Up=Meta+Alt+Up
+Switch Window Down=Meta+Alt+Down; Meta+J
+Switch Window Left=Meta+H; Meta+Alt+Left
+Switch Window Right=Meta+L; Meta+Alt+Right
+Switch Window Up=Meta+K; Meta+Alt+Up
 Switch to Desktop 1=Ctrl+F1
 Switch to Desktop 10=
 Switch to Desktop 11=
@@ -245,7 +245,7 @@ Walk Through Windows of Current Application Alternative=
 Walk Through Windows of Current Application Alternative (Reverse)=
 Window Above Other Windows=
 Window Below Other Windows=
-Window Close=Ctrl+Shift+Q; Alt+F4
+Window Close=Alt+F4; Ctrl+Shift+Q
 Window Fullscreen=
 Window Grow Horizontal=
 Window Grow Vertical=
@@ -336,19 +336,19 @@ _launch=
 
 [org.kde.krunner.desktop][Global Shortcuts]
 RunClipboard=Alt+Shift+F2
-_launch=Search; Alt+F2; Alt+Space
+_launch=Search; Alt+Space; Alt+F2
 
 [org.kde.plasma.emojier.desktop][Global Shortcuts]
 _launch=Meta+.
 
 [org.kde.spectacle.desktop][Global Shortcuts]
-ActiveWindowScreenShot=Meta+Print
+ActiveWindowScreenShot=
 CurrentMonitorScreenShot=
-FullScreenScreenShot=Shift+Print
+FullScreenScreenShot=
 OpenWithoutScreenshot=
 RectangularRegionScreenShot=Meta+Shift+S
-WindowUnderCursorScreenShot=Meta+Ctrl+Print
-_launch=Print
+WindowUnderCursorScreenShot=
+_launch=
 
 [org_kde_powerdevil][Global Shortcuts]
 Decrease Keyboard Brightness=Keyboard Brightness Down

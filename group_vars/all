@@ -49,6 +49,7 @@ dev_tools:
   - redisinsight
   - k9s
 home_dotfiles:
+  - zsh/.zshrc
   - zsh/.aliasrc
   - zsh/.pathrc
   - zsh/.p10k.zsh

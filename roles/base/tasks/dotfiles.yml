@@ -13,20 +13,20 @@
     - dotfiles
     - zsh
 
-- name: Render zsh dotfiles
-  ansible.builtin.template:
-    src: "{{ item }}"
-    dest: /home/{{ username }}/.zshrc
-    force: True
-    owner: "{{ username }}"
-    group: "{{ username }}"
-    mode: 0644
-  with_items:
-    - "zsh/.zshrc.j2"
-  become: yes
-  tags:
-    - dotfiles
-    - zsh
+      # - name: Render zsh dotfiles
+      #   ansible.builtin.template:
+      #     src: "{{ item }}"
+      #     dest: /home/{{ username }}/.zshrc
+      #     force: True
+      #     owner: "{{ username }}"
+      #     group: "{{ username }}"
+      #     mode: 0644
+      #   with_items:
+      #     - "zsh/.zshrc.j2"
+      #   become: yes
+      #   tags:
+      #     - dotfiles
+      #     - zsh
 
 - name: Copy kitty dotfiles
   copy:
