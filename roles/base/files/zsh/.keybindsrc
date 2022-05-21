@@ -1,0 +1,19 @@
+##
+# allow ctrl-p, ctrl-n for navigate history (standard behaviour)
+#
+bindkey '^P' history-substring-search-up
+bindkey '^N' history-substring-search-down
+
+##
+#   Navigate directory history using ALT-LEFT and ALT-RIGHT. ALT-LEFT moves back to directories
+#   that the user has changed to in the past, and ALT-RIGHT undoes ALT-LEFT.
+#
+#   Navigate directory hierarchy using ALT-UP and ALT-DOWN.
+#   ALT-UP moves to higher hierarchy (cd ..)
+#   ALT-DOWN moves into the first directory found in alphabetical order
+#   
+#   Editored to vim-like ALT-HJKL keymapping
+bindkey "\ek" dirhistory_zle_dirhistory_up
+bindkey "\ej" dirhistory_zle_dirhistory_down
+bindkey "\el" dirhistory_zle_dirhistory_future
+bindkey "\eh" dirhistory_zle_dirhistory_back

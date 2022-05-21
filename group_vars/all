@@ -54,6 +54,7 @@ home_dotfiles:
   - zsh/.aliasrc
   - zsh/.pathrc
   - zsh/.p10k.zsh
+  - zsh/.keybindsrc
 python:
   pyenv_version: 3.10.3
 utils:
@@ -67,5 +68,6 @@ zsh_plugins:
   - https://github.com/zsh-users/zsh-completions
   - https://github.com/zsh-users/zsh-history-substring-search
   - https://github.com/zsh-users/zsh-syntax-highlighting
+  - https://github.com/agkozak/zsh-z
 ranger_plugins:
   - https://github.com/alexanderjeurissen/ranger_devicons

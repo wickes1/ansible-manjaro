@@ -10,8 +10,9 @@
   with_items: "{{ home_dotfiles }}"
   become: yes
   tags:
-    - dotfiles
     - zsh
+    - dotfiles
+    - dotfiles-zsh
 
 - name: Copy kitty dotfiles
   copy:
@@ -26,8 +27,9 @@
     - "kitty/current-theme.conf"
   become: yes
   tags:
-    - dotfiles
     - kitty
+    - dotfiles
+    - dotfiles-kitty
 
 - name: Copy KDE dotfiles
   copy:
@@ -42,8 +44,9 @@
     - "kde/kde-shortcut-kitty.sh"
   become: yes
   tags:
-    - dotfiles
     - kde
+    - dotfiles
+    - dotfiles-kde
 
 - name: Copy joplin dotfiles
   copy:
@@ -57,8 +60,9 @@
     - "joplin/keymap.json"
   become: yes
   tags:
-    - dotfiles
     - joplin
+    - dotfiles
+    - dotfiles-joplin
 
 - name: Copy ranger dotfiles
   copy:
@@ -70,5 +74,6 @@
     mode: 0644
   become: yes
   tags:
-    - dotfiles
     - ranger
+    - dotfiles
+    - dotfiles-ranger
