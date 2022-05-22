@@ -64,16 +64,44 @@
     - dotfiles
     - dotfiles-joplin
 
-- name: Copy ranger dotfiles
+- name: copy ranger dotfiles
   copy:
     src: ranger
     dest: /home/{{ username }}/.config/
-    force: True
+    force: true
     owner: "{{ username }}"
     group: "{{ username }}"
     mode: u+rwx
-    become: yes
+  become: yes
   tags:
     - ranger
     - dotfiles
     - dotfiles-ranger
+
+- name: copy lf dotfiles
+  copy:
+    src: lf 
+    dest: /home/{{ username }}/.config/
+    force: true
+    owner: "{{ username }}"
+    group: "{{ username }}"
+    mode: u+rwx
+  become: yes
+  tags:
+    - ls
+    - dotfiles
+    - dotfiles-ls
+
+- name: copy lf execute script
+  copy:
+    src: lf/lfrun
+    dest: /home/{{ username }}/.local/bin/
+    force: true
+    owner: "{{ username }}"
+    group: "{{ username }}"
+    mode: u+rwx
+  become: yes
+  tags:
+    - ls
+    - dotfiles
+    - dotfiles-ls

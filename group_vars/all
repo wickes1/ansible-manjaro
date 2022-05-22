@@ -32,6 +32,9 @@ base_utils:
   - wmctrl
   - ranger
   - bat
+  - fd
+  - lf
+  - lsd
 dev_envs:
   - docker
   - docker-compose
