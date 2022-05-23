@@ -105,3 +105,17 @@
     - ls
     - dotfiles
     - dotfiles-ls
+
+- name: copy lunarvim dotfiles
+  copy:
+    src: lvim
+    dest: /home/{{ username }}/.config/
+    force: true
+    owner: "{{ username }}"
+    group: "{{ username }}"
+    mode: "644"
+  tags:
+    - lvim
+    - dotfiles
+    - dotfiles-lvim
+
