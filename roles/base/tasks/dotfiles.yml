@@ -12,7 +12,7 @@
   tags:
     - zsh
     - dotfiles
-    - dotfiles-zsh
+    - dotfiles-home
 
 - name: Copy kitty dotfiles
   copy:

@@ -33,8 +33,10 @@ base_utils:
   - ranger
   - bat
   - fd
-  - lf
+  - ueberzug
+# - lf
   - lsd
+  - xsel
 dev_envs:
   - docker
   - docker-compose
