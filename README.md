@@ -22,6 +22,11 @@ ansible-galaxy collection install kewlfft.aur
 ssh-keygen -R "192.168.56.2"
 ```
 
+### List tags
+
+```bash
+ansible-playbook playbook.yml --list-tags
+```
 
 ### Production
 

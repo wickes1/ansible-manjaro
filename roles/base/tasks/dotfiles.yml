@@ -51,7 +51,7 @@
 - name: Copy joplin dotfiles
   copy:
     src: "{{ item }}"
-    dest: /home/{{ username }}/.config/joplins/
+    dest: /home/{{ username }}/.config/joplin/
     force: True
     owner: "{{ username }}"
     group: "{{ username }}"
