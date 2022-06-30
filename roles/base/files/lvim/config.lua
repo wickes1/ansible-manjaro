@@ -20,6 +20,7 @@ lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<C-A>"] = "ggVG"
+lvim.keys.normal_mode["<leader>d"] = "*Ncgn"
 -- unmap a default keymapping
 -- lvim.keys.normal_mode["<C-Up>"] = false
 -- edit a default keymapping
@@ -62,7 +63,8 @@ lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
-lvim.builtin.nvimtree.show_icons.git = 0
+-- lvim.builtin.nvimtree.show_icons.git = 0
+lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
@@ -79,6 +81,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "java",
   "yaml",
   "go",
+  "rust"
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
@@ -174,3 +177,7 @@ vim.g.italic_variables = true -- italic variables(Default: false)
 vim.g.copilot_no_tab_map = true
 vim.g.copilot_assume_mapped = true
 vim.api.nvim_set_keymap("i", "<A-t>", 'copilot#Accept("")', { expr = true, silent = true })
+
+-- Set catppuccin
+-- Lua
+-- vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
