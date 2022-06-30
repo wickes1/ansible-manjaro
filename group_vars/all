@@ -38,6 +38,8 @@ base_utils:
   - lsd
   - xsel
   - lazygit
+  - libselinux
+  - libffi7
 dev_envs:
   - docker
   - docker-compose
@@ -56,6 +58,7 @@ dev_tools:
   - dbeaver
   - redisinsight
   - k9s
+  - websocat
 home_dotfiles:
   - zsh/.zshrc
   - zsh/.aliasrc
