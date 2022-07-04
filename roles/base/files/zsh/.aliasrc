@@ -7,7 +7,5 @@ alias lz='lazygit'
 alias c='copypath'
 alias lzd='lazydocker'
 alias vim='nvim'
-
-# dirsize
-alias ds='du -shc ./* | sort -rh '
-
+alias ds='du -shc ./* | sort -rh ' # dir size
+alias ns='notify-send'
