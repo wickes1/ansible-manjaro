@@ -33,8 +33,8 @@
 
 - name: Copy KDE dotfiles
   copy:
-    src: kde/
-    dest: /home/{{ username }}/.config/KDE
+    src: kde
+    dest: /home/{{ username }}/.config/
     force: True
     owner: "{{ username }}"
     group: "{{ username }}"
