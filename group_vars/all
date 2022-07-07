@@ -8,6 +8,7 @@ apps:
   - rclone
   - nerd-fonts-complete
   - libreoffice-fresh
+  - ani-cli
 js_apps:
   - joplin
 base_utils:
@@ -34,7 +35,6 @@ base_utils:
   - bat
   - fd
   - ueberzug
-# - lf
   - lsd
   - xsel
   - lazygit
@@ -66,13 +66,14 @@ home_dotfiles:
   - zsh/.p10k.zsh
   - zsh/.keybindsrc
 python:
-  pyenv_version: 3.10.3
+  pyenv_version: 3.10.4
 utils:
   - zsh
   - kitty
   - unzip
   - kwin-bismuth-bin
   - xdotool
+  - flameshot
 zsh_plugins:
   - https://github.com/zsh-users/zsh-autosuggestions
   - https://github.com/zsh-users/zsh-completions

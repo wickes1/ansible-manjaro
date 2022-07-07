@@ -33,15 +33,12 @@
 
 - name: Copy KDE dotfiles
   copy:
-    src: "{{ item }}"
+    src: kde/
     dest: /home/{{ username }}/.config/KDE
     force: True
     owner: "{{ username }}"
     group: "{{ username }}"
     mode: u+rwx
-  with_items:
-    - "kde/kde-shortcut-code.sh"
-    - "kde/kde-shortcut-kitty.sh"
   become: yes
   tags:
     - kde
@@ -119,3 +116,15 @@
     - dotfiles
     - dotfiles-lvim
 
+- name: copy flameshot dotfiles
+  copy:
+    src: flameshot
+    dest: /home/{{ username }}/.config/
+    force: true
+    owner: "{{ username }}"
+    group: "{{ username }}"
+    mode: "644"
+  tags:
+    - flameshot
+    - dotfiles
+    - dotfiles-flameshot
