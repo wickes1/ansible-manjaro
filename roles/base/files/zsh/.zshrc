@@ -33,8 +33,10 @@ fi
 # Editor
 export EDITOR='lvim'
 
-# Global Envs
+##### Global Envs #####
+# flutter
 export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
+export FLUTTER_GIT_URL=ssh://git@github.com/flutter/flutter.git
 
 # External configs
 source "$HOME/.aliasrc"
