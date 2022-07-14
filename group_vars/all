@@ -74,6 +74,7 @@ utils:
   - kwin-bismuth-bin
   - xdotool
   - flameshot
+  - espanso-bin
 zsh_plugins:
   - https://github.com/zsh-users/zsh-autosuggestions
   - https://github.com/zsh-users/zsh-completions

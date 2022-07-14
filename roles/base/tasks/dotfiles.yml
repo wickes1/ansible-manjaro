@@ -128,3 +128,30 @@
     - flameshot
     - dotfiles
     - dotfiles-flameshot
+
+- name: copy espanso dotfiles
+  copy:
+    src: espanso
+    dest: /home/{{ username }}/.config/
+    force: true
+    owner: "{{ username }}"
+    group: "{{ username }}"
+    mode: "644"
+  tags:
+    - espanso
+    - dotfiles
+    - dotfiles-espanso
+
+- name: espanso service restart
+  ansible.builtin.shell: |
+    espanso service register
+    espanso restart || /bin/true
+  register: command_result
+  failed_when: command_result.rc != 0
+  changed_when:
+    - "'successfully' in command_result.stdout"
+    - "'espanso is already running!' in command_result.stderr_lines"
+  tags:
+    - espanso
+    - dotfiles
+    - dotfiles-espanso
