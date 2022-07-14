@@ -50,6 +50,10 @@ dev_envs:
   - nodejs
   - postgresql-libs
   - librdkafka
+  - android-sdk
+  - android-sdk-platform-tools
+  - android-sdk-build-tools
+  - android-platform
 dev_tools:
   - lens-bin
   - electerm-bin
