@@ -33,6 +33,9 @@ fi
 # Editor
 export EDITOR='lvim'
 
+# Global Envs
+export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
+
 # External configs
 source "$HOME/.aliasrc"
 source "$HOME/.pathrc"
