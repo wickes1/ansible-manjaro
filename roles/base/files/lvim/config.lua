@@ -158,7 +158,10 @@ lvim.plugins = {
   },
   { "jnurmine/Zenburn" },
   { "morhetz/gruvbox" },
-  { "github/copilot.vim" }
+  { "github/copilot.vim" },
+  { "godlygeek/tabular" },
+  { "preservim/vim-markdown" }
+
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
@@ -174,6 +177,7 @@ vim.g.italic_functions = true -- italic functions(Default: false)
 vim.g.italic_variables = true -- italic variables(Default: false)
 
 -- Set Copilot
+-- :Copilot help
 vim.g.copilot_no_tab_map = true
 vim.g.copilot_assume_mapped = true
 vim.api.nvim_set_keymap("i", "<A-t>", 'copilot#Accept("")', { expr = true, silent = true })
@@ -181,3 +185,8 @@ vim.api.nvim_set_keymap("i", "<A-t>", 'copilot#Accept("")', { expr = true, silen
 -- Set catppuccin
 -- Lua
 -- vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
+
+-- Set vim-markdown
+vim.g.vim_markdown_folding_disabled = 1
+vim.g.vim_markdown_frontmatter = 1
+vim.g.vim_markdown_new_list_item_indent = 2
