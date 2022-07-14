@@ -30,7 +30,6 @@
   become_user: root
   tags:
     - base
-    - utils
     - base_utils
 
 - name: Upgrade the system using yay
@@ -41,7 +40,7 @@
   become: yes
   tags:
     - base
-    - utils
+    - upgrade
 
 - name: Install utils
   kewlfft.aur.aur:
