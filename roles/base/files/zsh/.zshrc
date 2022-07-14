@@ -34,9 +34,17 @@ fi
 export EDITOR='lvim'
 
 ##### Global Envs #####
+
 # flutter
 export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 export FLUTTER_GIT_URL=ssh://git@github.com/flutter/flutter.git
+
+# android studio
+export ANDROID_HOME=/opt/android-sdk
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+
+# golang
+export GOPATH=$HOME/go
 
 # External configs
 source "$HOME/.aliasrc"
