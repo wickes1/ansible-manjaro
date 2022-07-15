@@ -48,8 +48,6 @@
     name: "{{ item }}"
     aur_only: no
     state: present
-  become: yes
-  become_user: root
   with_items: "{{ utils }}"
   tags:
     - base
