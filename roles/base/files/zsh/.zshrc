@@ -34,14 +34,16 @@ fi
 export EDITOR='lvim'
 
 ##### Global Envs #####
-
 # flutter
 export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 export FLUTTER_GIT_URL=ssh://git@github.com/flutter/flutter.git
 
 # android studio
+export PKG_CONFIG_PATH=/usr/lib/pkgconfig
 export ANDROID_HOME=/opt/android-sdk
-export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+export ANDROID_SDK_ROOT=/opt/android-sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/cmdline-tools/tools/bin
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 
 # golang
 export GOPATH=$HOME/go
