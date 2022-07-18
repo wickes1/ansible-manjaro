@@ -22,9 +22,9 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<C-A>"] = "ggVG"
 lvim.keys.normal_mode["<leader>d"] = "*Ncgn"
 -- unmap a default keymapping
--- lvim.keys.normal_mode["<C-Up>"] = false
--- edit a default keymapping
--- lvim.keys.normal_mode["<C-q>"] = ":q<cr>"
+-- vim.keymap.del("n", "<C-Up>")
+-- override a default keymapping
+-- lvim.keys.normal_mode["<C-q>"] = ":q<cr>" -- or vim.keymap.set("n", "<C-q>", ":q<cr>" )
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
@@ -63,7 +63,6 @@ lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
--- lvim.builtin.nvimtree.show_icons.git = 0
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 
 -- if you don't want all the parsers change this to a table of the ones you want
@@ -144,37 +143,43 @@ lvim.builtin.treesitter.highlight.enabled = true
 --   {
 --     command = "codespell",
 --     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
--- filetypes = { "javascript", "python" },
+--     filetypes = { "javascript", "python" },
 --   },
 -- }
 
 -- Additional Plugins
 lvim.plugins = {
-  { "lunarvim/colorschemes" },
-  { "folke/tokyonight.nvim" },
+  -- { "lunarvim/colorschemes" },
   {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
   },
-  { "jnurmine/Zenburn" },
-  { "morhetz/gruvbox" },
   { "github/copilot.vim" },
   { "godlygeek/tabular" },
   { "preservim/vim-markdown" }
-
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
--- lvim.autocommands.custom_groups = {
---   { "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
--- }
+-- vim.api.nvim_create_autocmd("BufEnter", {
+--   pattern = { "*.json", "*.jsonc" },
+--   -- enable wrap mode for json files only
+--   command = "setlocal wrap",
+-- })
+-- vim.api.nvim_create_autocmd("FileType", {
+--   pattern = "zsh",
+--   callback = function()
+--     -- let treesitter use bash highlight for zsh files as well
+--     require("nvim-treesitter.highlight").attach(0, "bash")
+--   end,
+-- })
+
 
 -- Set colorscheme
-vim.g.transparent_background = false -- transparent background(Default: false)
-vim.g.italic_comments = true -- italic comments(Default: true)
-vim.g.italic_keywords = true -- italic keywords(Default: true)
-vim.g.italic_functions = true -- italic functions(Default: false)
-vim.g.italic_variables = true -- italic variables(Default: false)
+-- vim.g.transparent_background = false -- transparent background(Default: false)
+-- vim.g.italic_comments = true -- italic comments(Default: true)
+-- vim.g.italic_keywords = true -- italic keywords(Default: true)
+-- vim.g.italic_functions = true -- italic functions(Default: false)
+-- vim.g.italic_variables = true -- italic variables(Default: false)
 
 -- Set Copilot
 -- :Copilot help
