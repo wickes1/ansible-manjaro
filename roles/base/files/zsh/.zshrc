@@ -49,6 +49,7 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export GOPATH=$HOME/go
 
 # External configs
+source "$HOME/.scripts.sh"
 source "$HOME/.aliasrc"
 source "$HOME/.pathrc"
 source "$HOME/.keybindsrc"

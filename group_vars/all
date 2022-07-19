@@ -69,6 +69,7 @@ home_dotfiles:
   - zsh/.pathrc
   - zsh/.p10k.zsh
   - zsh/.keybindsrc
+  - zsh/.scripts.sh
 python:
   pyenv_version: 3.10.4
 utils:
