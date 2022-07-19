@@ -85,9 +85,9 @@
     mode: u+rwx
   become: yes
   tags:
-    - ls
+    - lf
     - dotfiles
-    - dotfiles-ls
+    - dotfiles-lf
 
 - name: copy lf execute script
   copy:
@@ -99,9 +99,9 @@
     mode: u+rwx
   become: yes
   tags:
-    - ls
+    - lf
     - dotfiles
-    - dotfiles-ls
+    - dotfiles-lf
 
 - name: copy lunarvim dotfiles
   copy:

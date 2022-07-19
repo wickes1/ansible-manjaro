@@ -10,7 +10,9 @@ set previewer '~/.config/lf/previewer'
 # Key bindings
 map <enter> shell
 map e $$EDITOR $fx
-map D delete
+map d delete
+map c cut
+map C clear
 
 # Commands
 cmd open ${{
