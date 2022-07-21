@@ -10,6 +10,7 @@ an executable
 
 -- general
 lvim.log.level = "warn"
+lvim.lint_on_save = true
 lvim.format_on_save = true
 lvim.colorscheme = "onedarker"
 -- to disable icons and use a minimalist setup, uncomment the following
@@ -114,20 +115,20 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- end
 
 -- -- set a formatter, this will override the language server formatting capabilities (if it exists)
--- local formatters = require "lvim.lsp.null-ls.formatters"
--- formatters.setup {
---   { command = "black", filetypes = { "python" } },
---   { command = "isort", filetypes = { "python" } },
---   {
---     -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
---     command = "prettier",
---     ---@usage arguments to pass to the formatter
---     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
---     extra_args = { "--print-with", "100" },
---     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
---     filetypes = { "typescript", "typescriptreact" },
---   },
--- }
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
+  { command = "black", filetypes = { "python" } },
+  { command = "isort", filetypes = { "python" } },
+  {
+    -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
+    command = "prettier",
+    ---@usage arguments to pass to the formatter
+    -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
+    extra_args = { "--print-with", "100" },
+    ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
+    filetypes = { "typescript", "typescriptreact" },
+  },
+}
 
 -- -- set additional linters
 -- local linters = require "lvim.lsp.null-ls.linters"
@@ -147,18 +148,6 @@ lvim.builtin.treesitter.highlight.enabled = true
 --   },
 -- }
 
--- Additional Plugins
-lvim.plugins = {
-  -- { "lunarvim/colorschemes" },
-  {
-    "folke/trouble.nvim",
-    cmd = "TroubleToggle",
-  },
-  { "github/copilot.vim" },
-  { "godlygeek/tabular" },
-  { "preservim/vim-markdown" }
-}
-
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {
 --   pattern = { "*.json", "*.jsonc" },
@@ -174,24 +163,51 @@ lvim.plugins = {
 -- })
 
 
--- Set colorscheme
+
+-- Additional Plugins
+lvim.plugins = {
+  -- { "lunarvim/colorschemes" },
+  {
+    "folke/trouble.nvim",
+    cmd = "TroubleToggle",
+  },
+  { "github/copilot.vim" },
+  { "godlygeek/tabular" },
+  { "preservim/vim-markdown" },
+  { "APZelos/blamer.nvim" }
+}
+
+
+-- colorscheme
+
 -- vim.g.transparent_background = false -- transparent background(Default: false)
 -- vim.g.italic_comments = true -- italic comments(Default: true)
 -- vim.g.italic_keywords = true -- italic keywords(Default: true)
 -- vim.g.italic_functions = true -- italic functions(Default: false)
 -- vim.g.italic_variables = true -- italic variables(Default: false)
 
--- Set Copilot
+-- copilot
+
 -- :Copilot help
 vim.g.copilot_no_tab_map = true
 vim.g.copilot_assume_mapped = true
 vim.api.nvim_set_keymap("i", "<A-t>", 'copilot#Accept("")', { expr = true, silent = true })
 
--- Set catppuccin
--- Lua
+-- catppuccin
+
 -- vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
 
--- Set vim-markdown
+-- vim-markdown
+
 vim.g.vim_markdown_folding_disabled = 1
 vim.g.vim_markdown_frontmatter = 1
 vim.g.vim_markdown_new_list_item_indent = 2
+
+-- blamer
+
+vim.g.blamer_enabled = 1
+vim.g.blamer_delay = 0
+vim.g.blamer_show_in_visual_modes = 1
+vim.g.blamer_show_in_insert_modes = 1
+vim.g.blamer_prefix = "  💬  "
+vim.g.blamer_date_format = "%d/%m/%y %H:%M"
