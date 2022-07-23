@@ -174,7 +174,8 @@ lvim.plugins = {
   { "github/copilot.vim" },
   { "godlygeek/tabular" },
   { "preservim/vim-markdown" },
-  { "APZelos/blamer.nvim" }
+  { "APZelos/blamer.nvim" },
+  { "tpope/vim-surround" }
 }
 
 
