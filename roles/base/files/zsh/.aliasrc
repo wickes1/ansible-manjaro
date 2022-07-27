@@ -9,3 +9,4 @@ alias lzd='lazydocker'
 alias vim='nvim'
 alias ds='du -shc ./* | sort -rh ' # dir size
 alias ns='notify-send'
+alias go='richgo'
