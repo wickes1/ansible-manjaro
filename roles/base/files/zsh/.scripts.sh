@@ -5,6 +5,6 @@ function dg(){
 }
 
 # replace all occurance in current direcctory
-function sdf(){
+function sdd(){
   sd $1 $2 $(fd --type file)
 }
