@@ -13,6 +13,7 @@ plugins=(
         dirhistory
         kubectl
         extract
+        git
         # external plugins
         zsh-autosuggestions
         zsh-completions
@@ -46,7 +47,13 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/c
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 
 # golang
-export GOPATH=$HOME/go
+# export GOPATH=$HOME/go
+# goenv
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
+export PATH="$GOROOT/bin:$PATH"
+export PATH="$PATH:$GOPATH/bin"
 
 # External configs
 source "$HOME/.scripts.sh"
