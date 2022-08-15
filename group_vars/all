@@ -80,6 +80,7 @@ utils:
   - xdotool
   - flameshot
   - espanso-bin
+  - ncdu
 zsh_plugins:
   - https://github.com/zsh-users/zsh-autosuggestions
   - https://github.com/zsh-users/zsh-completions
