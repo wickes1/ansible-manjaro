@@ -11,6 +11,7 @@ apps:
   - ani-cli
 js_apps:
   - joplin
+  - git-user
 base_utils:
   - yay
   - base-devel
