@@ -17,3 +17,4 @@ alias dockerrm='docker rm $(docker ps -aq)'
 alias gpb='git fetch -p ; git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d'
 # git prune tag
 alias gpt='git fetch --prune origin "+refs/tags/*:refs/tags/*"'
+alias cb='clipboard'
