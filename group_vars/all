@@ -13,9 +13,11 @@ js_apps:
   - joplin
   - git-user
 base_utils:
+  - neovim-nightly-bin
   - yay
   - base-devel
-  - binutils gcc
+  - binutils
+  - gcc
   - htop
   - keychain
   - libcurl-gnutls
