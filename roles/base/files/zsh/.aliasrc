@@ -19,4 +19,5 @@ alias gpb='git fetch -p ; git branch -r | awk '{print $1}' | egrep -v -f /dev/fd
 alias gpt='git fetch --prune origin "+refs/tags/*:refs/tags/*"'
 alias cb='clipboard'
 alias npm='pnpm'
+alias npx='pnpx'
 alias gup='gup'
