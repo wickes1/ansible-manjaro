@@ -8,3 +8,8 @@ function dg(){
 function sdd(){
   sd $1 $2 $(fd --type file)
 }
+
+# better rm
+function rm(){
+  mv $1 /tmp
+}
