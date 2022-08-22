@@ -13,7 +13,6 @@ plugins=(
         dirhistory
         kubectl
         extract
-        git
         # external plugins
         zsh-autosuggestions
         zsh-completions
