@@ -65,7 +65,7 @@ dev_tools:
   - redisinsight
   - k9s
   - websocat
-  - mycli
+  - pgcli
 home_dotfiles:
   - zsh/.zshrc
   - zsh/.aliasrc
@@ -84,6 +84,7 @@ utils:
   - flameshot
   - espanso-bin
   - ncdu
+  - trash-cli
 zsh_plugins:
   - https://github.com/zsh-users/zsh-autosuggestions
   - https://github.com/zsh-users/zsh-completions
