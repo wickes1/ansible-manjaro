@@ -9,17 +9,24 @@ alias lzd='lazydocker'
 alias vim='nvim'
 alias ds='du -shc ./* | sort -rh ' # dir size
 alias ns='notify-send'
-alias gotest='richgo test ./... -v'
 alias dockerps='docker ps -aq'
 alias dockerkill='docker kill $(docker ps -aq)'
 alias dockerrm='docker rm $(docker ps -aq)'
+alias cb='clipboard'
+
+# git
+alias gits='git -c http.sslVerify=false'
 # git prune branch
 alias gpb='git fetch -p ; git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d'
 # git prune tag
 alias gpt='git fetch --prune origin "+refs/tags/*:refs/tags/*"'
-alias cb='clipboard'
+
+# javascript
 alias npm='pnpm'
 alias npx='pnpx'
-alias gits='git -c http.sslVerify=false'
+
+# golang 
+alias gotest='richgo test ./... -v'
 alias golint='golangci-lint run'
 alias grm='go run main.go'
+alias ggu='go get -u ./...'
