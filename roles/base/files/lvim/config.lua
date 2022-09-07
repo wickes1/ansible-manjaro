@@ -171,10 +171,10 @@ lvim.plugins = {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
   },
-  { "github/copilot.vim" },
-  { "godlygeek/tabular" },
-  { "preservim/vim-markdown" },
-  { "APZelos/blamer.nvim" },
+  -- { "github/copilot.vim" },
+  -- { "godlygeek/tabular" },
+  -- { "preservim/vim-markdown" },
+  -- { "APZelos/blamer.nvim" },
   { "tpope/vim-surround" }
 }
 
@@ -212,3 +212,8 @@ vim.g.blamer_show_in_visual_modes = 1
 vim.g.blamer_show_in_insert_modes = 1
 vim.g.blamer_prefix = "  💬  "
 vim.g.blamer_date_format = "%d/%m/%y %H:%M"
+
+
+-- Tab switch buffer
+lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
+lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
