@@ -1,18 +1,23 @@
-alias ssha='eval $(ssh-agent) && ssh-add'
-alias kc='kubecm'
-alias ll='lsd -l'
+# short name
 alias lf='lfrun'
-alias v='lvim .'
+alias kc='kubecm'
+alias vim='nvim'
 alias lz='lazygit'
 alias c='copypath'
 alias lzd='lazydocker'
-alias vim='nvim'
-alias ds='du -shc ./* | sort -rh ' # dir size
 alias ns='notify-send'
+
+# short command
+alias v='lvim .'
+alias ssha='eval $(ssh-agent) && ssh-add'
+alias ll='lsd -l'
+alias ds='du -shc ./* | sort -rh ' # dir size
+alias cb='xclip -sel clip'
+
+# docker
 alias dockerps='docker ps -aq'
 alias dockerkill='docker kill $(docker ps -aq)'
 alias dockerrm='docker rm $(docker ps -aq)'
-alias cb='clipboard'
 
 # git
 alias gits='git -c http.sslVerify=false'
