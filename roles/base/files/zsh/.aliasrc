@@ -6,6 +6,7 @@ alias lz='lazygit'
 alias c='copypath'
 alias lzd='lazydocker'
 alias ns='notify-send'
+alias guser='git-user'
 
 # short command
 alias v='lvim .'
