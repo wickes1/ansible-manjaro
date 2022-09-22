@@ -11,7 +11,7 @@ apps:
   - ani-cli
 js_apps:
   - joplin
-  - git-user
+  - git-user-switch
 base_utils:
   - neovim-nightly-bin
   - yay

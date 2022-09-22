@@ -20,4 +20,5 @@
   with_items: "{{ js_apps }}"
   become: yes
   tags:
+    - js_apps
     - apps
