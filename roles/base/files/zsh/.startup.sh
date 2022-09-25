@@ -14,8 +14,5 @@ notify-send 'hello wolrd'
 # auto hide mouse cursor
 unclutter -idle 10 &
 
-# go app update
-gup update
-
 # goodby words
 notify-send 'goodbye wolrd'
