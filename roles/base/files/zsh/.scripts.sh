@@ -10,7 +10,7 @@ function sdd() {
 }
 
 function gqlgeninit() {
-	#!/bin/zsh
+	#!/bin/bash
 	# file: gqlgen-gen.sh
 	# usage: chmod+x gqlgen-gen.sh && ./gqlgen-gen.sh
 
@@ -44,8 +44,7 @@ EOF
 	# go generate ./...
 	echo "Seding go generate"
 	sed -i '/type Resolver struct{}/i \
-  // \
-  //go:generate go run github.com/99designs/gqlgen generate' graph/resolver.go
+//go:generate go run github.com/99designs/gqlgen generate' graph/resolver.go
 	go mod tidy
 	go generate ./...
 
