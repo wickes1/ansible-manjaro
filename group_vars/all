@@ -89,6 +89,8 @@ utils:
   - trash-cli
   - onefetch
   - fastfetch
+  - slop
+  - screenkey
 zsh_plugins:
   - https://github.com/zsh-users/zsh-autosuggestions
   - https://github.com/zsh-users/zsh-completions
