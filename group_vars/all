@@ -42,6 +42,16 @@ base_utils:
   - lazygit
   - libselinux
   - libffi7
+  # input method
+  - fcitx5
+  - fcitx5-chinese-addons
+  - fcitx5-configtool
+  - fcitx5-gtk
+  - fcitx5-material-color
+  - fcitx5-mozc
+  - fcitx5-pinyin-zhwiki
+  - fcitx5-qt
+  - tegaki-models-zinnia-japanese
 dev_envs:
   - docker
   - docker-compose
