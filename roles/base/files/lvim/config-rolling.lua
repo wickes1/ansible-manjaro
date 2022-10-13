@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.lint_on_save = true
-lvim.format_on_save = true
+lvim.format_on_save = false
 lvim.colorscheme = "onedarker"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
@@ -21,6 +21,8 @@ lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<C-A>"] = "ggVG"
+-- lvim.keys.insert_mode["<C-t>"] = "<Esc><Cmd>ToggleTerm<CR>"
+-- lvim.keys.normal_mode["<C-t>"] = '<Cmd>execute v:count . "ToggleTerm"<CR>'
 lvim.keys.normal_mode["<leader>d"] = "*Ncgn"
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
