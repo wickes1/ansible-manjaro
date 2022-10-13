@@ -47,10 +47,6 @@ lvim.keys.normal_mode["<leader>d"] = "*Ncgn"
 --   },
 -- }
 
--- Change theme settings
--- lvim.builtin.theme.options.dim_inactive = true
--- lvim.builtin.theme.options.style = "storm"
-
 -- Use which-key to add extra bindings with the leader-key prefix
 -- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 -- lvim.builtin.which_key.mappings["t"] = {
@@ -92,13 +88,13 @@ lvim.builtin.treesitter.ensure_installed = {
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
-lvim.builtin.treesitter.highlight.enable = true
+lvim.builtin.treesitter.highlight.enabled = true
 
 -- generic LSP settings
 
 -- -- make sure server will always be installed even if the server is in skipped_servers list
 -- lvim.lsp.installer.setup.ensure_installed = {
---     "sumneko_lua",
+--     "sumeko_lua",
 --     "jsonls",
 -- }
 -- -- change UI setting of `LspInstallInfo`
@@ -138,18 +134,17 @@ lvim.builtin.treesitter.highlight.enable = true
 -- -- set a formatter, this will override the language server formatting capabilities (if it exists)
 -- local formatters = require "lvim.lsp.null-ls.formatters"
 -- formatters.setup {
---   -- { command = "black", filetypes = { "python" } },
---   -- { command = "isort", filetypes = { "python" } },
---   -- {
---   --   -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
---   --   command = "prettier",
---   --   ---@usage arguments to pass to the formatter
---   --   -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
---   --   extra_args = { "--print-with", "100" },
---   --   ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
---   --   filetypes = { "typescript", "typescriptreact" },
---   -- },
+--   { command = "black", filetypes = { "python" } },
 --   { command = "isort", filetypes = { "python" } },
+--   {
+--     -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
+--     command = "prettier",
+--     ---@usage arguments to pass to the formatter
+--     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
+--     extra_args = { "--print-with", "100" },
+--     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
+--     filetypes = { "typescript", "typescriptreact" },
+--   },
 -- }
 
 -- -- set additional linters
@@ -193,6 +188,7 @@ lvim.plugins = {
 --   end,
 -- })
 
+
 -- My Personal Config -------------------------------
 
 -- colorscheme
@@ -206,9 +202,9 @@ lvim.plugins = {
 -- copilot
 
 -- :Copilot help
-vim.g.copilot_no_tab_map = true
-vim.g.copilot_assume_mapped = true
-vim.api.nvim_set_keymap("i", "<A-t>", 'copilot#Accept("")', { expr = true, silent = true })
+-- vim.g.copilot_no_tab_map = true
+-- vim.g.copilot_assume_mapped = true
+-- vim.api.nvim_set_keymap("i", "<A-t>", 'copilot#Accept("")', { expr = true, silent = true })
 
 -- catppuccin
 
@@ -216,20 +212,17 @@ vim.api.nvim_set_keymap("i", "<A-t>", 'copilot#Accept("")', { expr = true, silen
 
 -- vim-markdown
 
-vim.g.vim_markdown_folding_disabled = 1
-vim.g.vim_markdown_frontmatter = 1
-vim.g.vim_markdown_new_list_item_indent = 2
+-- vim.g.vim_markdown_folding_disabled = 1
+-- vim.g.vim_markdown_frontmatter = 1
+-- vim.g.vim_markdown_new_list_item_indent = 2
 
 -- blamer
 
-vim.g.blamer_enabled = 1
-vim.g.blamer_delay = 0
-vim.g.blamer_show_in_visual_modes = 1
-vim.g.blamer_show_in_insert_modes = 1
-vim.g.blamer_prefix = "  💬  "
-vim.g.blamer_date_format = "%d/%m/%y %H:%M"
-
-
+-- vim.g.blamer_enabled = 1
+-- vim.g.blamer_delay = 0
+-- vim.g.blamer_show_in_visual_modes = 1
+-- vim.g.blamer_show_in_insert_modes = 1
+-- vim.g.blamer_prefix = "  💬  "
 
 -- Tab switch buffer
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
