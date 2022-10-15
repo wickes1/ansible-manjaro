@@ -1,3 +1,4 @@
+#!/bin/bash
 
 # === Setup Environment ===
 # load zshrc
@@ -9,10 +10,24 @@ export DISPLAY=:0.0
 
 # === Startup Command ===
 # welcome words
-notify-send 'hello wolrd'
+MSG=$(cat <<-END
+  Time: <b>$(date +"%Y-%m-%d %T")</b>
+END
+)
+notify-send -u normal -t 2000 \
+  'hello world' \
+  $MSG
 
 # auto hide mouse cursor
 unclutter -idle 10 &
+notify-send -t 2000 'unclutter' 'mouse idle timeout 10 seconds'
+
+# oh-my-zsh update
+omz update > /dev/null && notify-send -t 2000 'omz updated'
+
+# go app update
+gup update | while read OUTPUT; do notify-send -t 500 "$OUTPUT"; done
+# gup update > /dev/null && notify-send 'gup updated'
 
 # goodby words
 notify-send 'goodbye wolrd'
