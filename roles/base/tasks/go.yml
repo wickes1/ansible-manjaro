@@ -1,0 +1,11 @@
+---
+- name: Install Go binary app
+  ansible.builtin.shell: "{{item}}"
+  with_items: "{{ go_apps }}"
+  async: 50
+  poll: 0
+  tags:
+    - apps
+    - go_apps
+
+

@@ -27,7 +27,6 @@
     dest: /home/{{ username }}/.oh-my-zsh/custom/plugins/{{ item.rsplit('/', 1)[-1] }}
     depth: 1
   with_items: "{{ zsh_plugins }}"
-  become: yes
   tags:
     - zsh
     - zsh-plugin
@@ -37,7 +36,6 @@
     repo: https://github.com/romkatv/powerlevel10k
     dest: /home/{{ username }}/.oh-my-zsh/custom/themes/powerlevel10k
     depth: 1
-  become: yes
   tags:
     - zsh
     - zsh-theme
