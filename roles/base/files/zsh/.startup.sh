@@ -15,19 +15,22 @@ MSG=$(cat <<-END
 END
 )
 notify-send -u normal -t 2000 \
-  'hello world' \
+  "hello world" \
   $MSG
 
 # auto hide mouse cursor
 unclutter -idle 10 &
-notify-send -t 2000 'unclutter' 'mouse idle timeout 10 seconds'
+notify-send -t 2000 "unclutter" "mouse idle timeout 10 seconds"
+
+# joplin sync
+(joplin sync | while read OUTPUT; do notify-send -t 2000 "Joplin" "$OUTPUT"; done) &
 
 # oh-my-zsh update
-omz update > /dev/null && notify-send -t 2000 'omz updated'
+(omz update > /dev/null && notify-send -t 2000 "omz updated") &
 
 # go app update
-gup update | while read OUTPUT; do notify-send -t 500 "$OUTPUT"; done
-# gup update > /dev/null && notify-send 'gup updated'
+(gup update | while read OUTPUT; do notify-send -t 500 "$OUTPUT"; done) &
+# gup update > /dev/null && notify-send "gup updated"
 
 # goodby words
-notify-send 'goodbye wolrd'
+notify-send "goodbye wolrd"
