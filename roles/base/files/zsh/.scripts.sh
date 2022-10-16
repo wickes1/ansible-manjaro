@@ -52,3 +52,9 @@ EOF
 	echo "Run 'go generate ./...' to generate new model"
 	echo "Run 'PORT=4000 go run ./server.go' to specify port run"
 }
+
+function background(){
+  (nohup "$@" > /dev/null) & disown
+  # PID=$!
+  # echo $PID
+}
