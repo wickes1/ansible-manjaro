@@ -22,8 +22,8 @@ lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<C-A>"] = "ggVG"
 lvim.keys.normal_mode["<leader>d"] = "*Ncgn"
--- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
--- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
+lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
+lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
 -- override a default keymapping
@@ -87,7 +87,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "graphql"
 }
 
-lvim.builtin.treesitter.ignore_install = { "haskell" }
+-- lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
 -- generic LSP settings
@@ -223,7 +223,3 @@ lvim.plugins = {
 -- vim.g.blamer_show_in_visual_modes = 1
 -- vim.g.blamer_show_in_insert_modes = 1
 -- vim.g.blamer_prefix = "  💬  "
-
--- Tab switch buffer
-lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
-lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
