@@ -40,7 +40,6 @@ base_utils:
   - lsd
   - xsel
   - lazygit
-  - libselinux
   - libffi7
   # input method
   - fcitx5
@@ -51,7 +50,6 @@ base_utils:
   - fcitx5-mozc
   - fcitx5-pinyin-zhwiki
   - fcitx5-qt
-  - tegaki-models-zinnia-japanese
 dev_envs:
   - docker
   - docker-compose
