@@ -11,11 +11,11 @@ export DISPLAY=:0.0
 # === Startup Command ===
 # welcome words
 MSG=$(cat <<-END
-  Time: <b>$(date +"%Y-%m-%d %T")</b>
+  System Initializing
 END
 )
 notify-send -u normal -t 2000 \
-  "hello world" \
+  "Initializing" \
   $MSG
 
 # auto hide mouse cursor
@@ -33,4 +33,11 @@ notify-send -t 2000 "unclutter" "mouse idle timeout 10 seconds"
 # gup update > /dev/null && notify-send "gup updated"
 
 # goodby words
-notify-send "goodbye wolrd"
+
+MSG=$(cat <<-END
+  Today is $(date +"%Y-%m-%d %T")
+END
+)
+notify-send -u normal -t 5000 \
+  "hello world" \
+  $MSG
