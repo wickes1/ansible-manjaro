@@ -41,6 +41,7 @@ base_utils:
   - xsel
   - lazygit
   - libffi7
+  - gitleaks
   # input method
   - fcitx5
   - fcitx5-chinese-addons
