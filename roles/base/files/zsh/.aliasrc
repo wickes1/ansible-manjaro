@@ -1,6 +1,6 @@
 # short name
 alias lf='lfrun'
-alias kc='kubecm'
+alias kc='kubectl kc'
 alias vim='nvim'
 alias lz='lazygit'
 alias c='copypath'
