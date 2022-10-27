@@ -4,7 +4,6 @@ apps:
   - joplin-appimage
   - microsoft-edge-stable-bin
   - anydesk-bin
-  - rambox-bin
   - rclone
   - nerd-fonts-complete
   - libreoffice-fresh
