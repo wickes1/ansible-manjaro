@@ -24,11 +24,15 @@ plugins=(
         zsh-z
         # fzf-zsh-plugin
         # fzf-tab
+        autoupdate
 )
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
 
 ##### GLOBAL CONFIGS #####
+
+# plugins autoupdate
+export UPDATE_ZSH_DAYS=1
 
 # editor
 export EDITOR='lvim'

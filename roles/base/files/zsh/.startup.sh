@@ -2,7 +2,7 @@
 
 # === Setup Environment ===
 # load zshrc
-source $HOME/.zshrc
+source "$HOME/.zshrc"
 
 # set extra env
 export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
@@ -16,20 +16,20 @@ END
 )
 notify-send -u normal -t 2000 \
   "Initializing" \
-  $MSG
+  "$MSG"
 
 # auto hide mouse cursor
-unclutter -idle 10 &
+nohup unclutter -idle 10 > /dev/null 2>&1 & 
 notify-send -t 2000 "unclutter" "mouse idle timeout 10 seconds"
 
 # joplin sync
-(joplin sync | while read OUTPUT; do notify-send -t 2000 "Joplin" "$OUTPUT"; done) &
+(joplin sync | while read -r OUTPUT; do notify-send -t 2000 "Joplin" "$OUTPUT"; done) &
 
 # oh-my-zsh update
 (omz update > /dev/null && notify-send -t 2000 "omz updated") &
 
 # go app update
-(gup update | while read OUTPUT; do notify-send -t 500 "$OUTPUT"; done) &
+(gup update | while read -r OUTPUT; do notify-send -t 500 "$OUTPUT"; done) &
 # gup update > /dev/null && notify-send "gup updated"
 
 # goodby words
@@ -40,4 +40,4 @@ END
 )
 notify-send -u normal -t 5000 \
   "hello world" \
-  $MSG
+  "$MSG"
