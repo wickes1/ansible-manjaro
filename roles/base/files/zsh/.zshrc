@@ -17,6 +17,7 @@ plugins=(
         dirhistory
         kubectl
         extract
+
         # external plugins
         zsh-autosuggestions
         zsh-history-substring-search
@@ -24,15 +25,11 @@ plugins=(
         zsh-z
         # fzf-zsh-plugin
         # fzf-tab
-        autoupdate
 )
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
 
 ##### GLOBAL CONFIGS #####
-
-# plugins autoupdate
-export UPDATE_ZSH_DAYS=1
 
 # editor
 export EDITOR='lvim'
@@ -61,9 +58,9 @@ eval "$(goenv init -)"
 export PATH="$GOROOT/bin:$PATH"
 
 # external configs
-source "$HOME/.scripts.sh"
+# source "$HOME/.scripts.sh"
 source "$HOME/.aliasrc"
-source "$HOME/.pathrc"
+# source "$HOME/.pathrc"
 source "$HOME/.keybindsrc"
 
 # pnpm
@@ -72,3 +69,6 @@ export PATH="$PNPM_HOME:$PATH"
 
 # krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# airflow
+export AIRFLOW_HOME="$HOME/airflow"
