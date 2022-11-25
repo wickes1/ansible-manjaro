@@ -16,6 +16,7 @@ alias ds='du -shc ./* | sort -rh ' # dir size
 alias cb='xclip -sel clip'
 alias cbp='xclip -selection clipboard -t image/png -o' # > image.png
 alias pyfmt='autoflake --remove-all-unused-imports --ignore-init-module-imports --remove-duplicate-keys --remove-unused-variables -i -r . ; isort . ; black . -t py310'
+alias nodeclean='find . -name "node_modules" -type d -prune -exec rm -rf "{}" +'
 
 # kitty
 alias s="kitty +kitten ssh"
