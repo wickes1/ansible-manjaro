@@ -81,6 +81,7 @@ home_dotfiles:
   - zsh/.p10k.zsh
   - zsh/.keybindsrc
   - zsh/.scripts.sh
+  - zsh/.zprofile
 home_scripts:
   - zsh/.startup.sh
 python:

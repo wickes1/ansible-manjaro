@@ -37,25 +37,22 @@ export EDITOR='lvim'
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init --path)"
-fi
+eval "$(pyenv init -)"
 
 # flutter
-export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
-export FLUTTER_GIT_URL=ssh://git@github.com/flutter/flutter.git
+# export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
+# export FLUTTER_GIT_URL=ssh://git@github.com/flutter/flutter.git
 
 # android studio
-export PKG_CONFIG_PATH=/usr/lib/pkgconfig
-export ANDROID_HOME=/opt/android-sdk
-export ANDROID_SDK_ROOT=/opt/android-sdk
-export PATH=$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/cmdline-tools/tools/bin:$ANDROID_SDK_ROOT/emulator:$PATH
+# export PKG_CONFIG_PATH=/usr/lib/pkgconfig
+# export ANDROID_HOME=/opt/android-sdk
+# export ANDROID_SDK_ROOT=/opt/android-sdk
+# export PATH=$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/cmdline-tools/tools/bin:$ANDROID_SDK_ROOT/emulator:$PATH
 
 # goenv
 export GOENV_ROOT="$HOME/.goenv"
 export PATH="$GOENV_ROOT/bin:$PATH"
 eval "$(goenv init -)"
-export PATH="$GOROOT/bin:$PATH"
 
 # external configs
 # source "$HOME/.scripts.sh"
